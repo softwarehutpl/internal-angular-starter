@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+// import { StateService } from '@uirouter/angular';
 
 @Component({
   selector: 'app-root',
@@ -8,13 +8,11 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'test app';
-  router: Router;
 
-  constructor(_router: Router) {
-    this.router = _router;
-  }
+  // constructor(private $state: StateService) {}
+  constructor() {}
 
-  changeRoute() {
-    this.router.navigateByUrl('/foo');
-  }
+  // changeRoute() {
+  //   this.$state.go('foo');
+  // }
 }

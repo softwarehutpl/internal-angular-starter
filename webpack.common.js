@@ -16,7 +16,6 @@ const {NoEmitOnErrorsPlugin, EnvironmentPlugin, HashedModuleIdsPlugin} = require
 const {BaseHrefWebpackPlugin, SuppressExtractedTextChunksWebpackPlugin} = require('@angular/cli/plugins/webpack');
 const {CommonsChunkPlugin, ModuleConcatenationPlugin} = require('webpack').optimize;
 const {LicenseWebpackPlugin} = require('license-webpack-plugin');
-const {PurifyPlugin} = require('@angular-devkit/build-optimizer');
 
 const nodeModules = path.join(process.cwd(), 'node_modules');
 const realNodeModules = fs.realpathSync(nodeModules);
@@ -492,7 +491,7 @@ module.exports = {
       "hashDigest": "base64",
       "hashDigestLength": 4
     }),
-    new ModuleConcatenationPlugin({}),
+    // new ModuleConcatenationPlugin({}),
     new LicenseWebpackPlugin({
       "licenseFilenames": [
         "LICENSE",
@@ -515,32 +514,6 @@ module.exports = {
       "additionalPackages": [],
       "pattern": /^(MIT|ISC|BSD.*)$/
     }),
-    new PurifyPlugin(),
-    new UglifyJsPlugin({
-      "test": /\.js$/i,
-      "extractComments": false,
-      "sourceMap": false,
-      "cache": false,
-      "parallel": false,
-      "uglifyOptions": {
-        "output": {
-          "ascii_only": true,
-          "comments": false,
-          "webkit": true
-        },
-        "ecma": 5,
-        "warnings": false,
-        "ie8": false,
-        "mangle": {
-          "safari10": true
-        },
-        "compress": {
-          "comparisons": false,
-          "pure_getters": true,
-          "passes": 3
-        }
-      }
-    })
   ],
   "node": {
     "fs": "empty",
