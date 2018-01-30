@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-// import { StateService } from '@uirouter/angular';
+import { StateService } from '@uirouter/angular';
 
 @Component({
   selector: 'app-root',
@@ -9,10 +9,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'test app';
 
-  // constructor(private $state: StateService) {}
-  constructor() {}
+  constructor(private $state: StateService) {}
 
-  // changeRoute() {
-  //   this.$state.go('foo');
-  // }
+  changeRoute() {
+    this.$state.go('foo');
+  }
 }

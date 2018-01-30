@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-// import { SharedModule } from '../../shared.module';
+import { SharedModule } from '../../shared.module';
 import { HomepageComponent } from './views/homepage/homepage.component';
 
 @NgModule({
@@ -7,7 +7,7 @@ import { HomepageComponent } from './views/homepage/homepage.component';
     HomepageComponent
   ],
   imports: [
-    // SharedModule
+    SharedModule
   ],
   exports: []
 })

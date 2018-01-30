@@ -1,14 +1,17 @@
-import {NgModule} from '@angular/core';
-import {SharedModule} from '../../shared.module';
-import {fooRoutingComponents, FooRoutingModule} from './foo.routing.module';
-
+import { NgModule } from '@angular/core';
+import { SharedModule } from '../../shared.module';
+import { UIRouterModule } from '@uirouter/angular';
+import { FooViewComponent } from './views/foo-view/foo-view.component';
+import { FOO_STATES } from './foo.states';
 
 @NgModule({
   declarations: [
-    fooRoutingComponents
+    FooViewComponent
   ],
   imports: [
-    FooRoutingModule,
+    UIRouterModule.forChild({
+      states: FOO_STATES
+    }),
     SharedModule
   ],
   exports: []
