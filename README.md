@@ -2,6 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.5.
 
+## Routing
+There is extended version of the project on branch feature/uirouter using ui-router library for routing instead of the default angular router.
+For more details about UI-Router go to https://ui-router.github.io/ng2/
+
 ## Development server
 
 Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
