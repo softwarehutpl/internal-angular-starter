@@ -11,7 +11,6 @@ export class BarDetailsComponent implements OnInit {
   constructor(private $state: StateService) {}
 
   ngOnInit() {
-    console.log('INIT')
     this.id = this.$state.params.id;
   }
 
