@@ -2,11 +2,11 @@ import { UIRouter, Category } from '@uirouter/core';
 import { Visualizer } from '@uirouter/visualizer';
 
 // import { googleAnalyticsHook } from './util/ga';
-// import { requiresAuthHook } from './global/auth.hook';
+import { requiresAuthHook } from './common/hooks/auth.hook';
 
 export function routerConfigFn(router: UIRouter) {
-    // const transitionService = router.transitionService;
-    // requiresAuthHook(transitionService);
+    const transitionService = router.transitionService;
+    requiresAuthHook(transitionService);
     // googleAnalyticsHook(transitionService);
 
     router.trace.enable(Category.TRANSITION);

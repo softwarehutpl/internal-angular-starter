@@ -1,5 +1,6 @@
-const {AngularCompilerPlugin} = require('@ngtools/webpack');
+const { AngularCompilerPlugin } = require('@ngtools/webpack');
 const { PurifyPlugin } = require('@angular-devkit/build-optimizer');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
